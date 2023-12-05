@@ -1,0 +1,146 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-size: 1rem;
+    min-height: 100vh;
+    min-width: 100vw;
+    background-color:#4a98f7;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+.clock_container{
+    width: 50%;
+    height: 50%;
+    background-color:#fff;
+    /* border:1px solid red; */
+    border-radius: 10px;
+}
+
+.header{
+   width: 100%;
+   height: 20%;
+   /* border: 1px solid blue; */
+ display: flex;
+ justify-content: center;
+ align-items: center;
+   
+}
+.header h4{
+    font-size: 28px;
+    font-weight: 500;
+
+}
+
+.nav{
+    width: 100%;
+    height: 70%;
+    /* border: 1px solid yellow; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction:column
+}
+
+.nav h2{
+    font-size: 38px;
+    font-weight: 700;
+}
+
+.img{
+    max-width: 30%;
+    height: 50%;
+    margin: 10px;
+}
+.section{
+    width: 100%;
+    /* border: 1px solid black; */
+    display: flex;
+    justify-content:space-around;
+    margin: 10px;
+
+}
+.section .column{
+    border-radius: 5px;
+    padding: 5px 10px;
+    border: 1px solid #999;
+    width: calc(100%/3 -15px);
+}
+
+.clock_container .section.disable{
+   
+    opacity: 0.6;
+    pointer-events: none;
+}
+
+ .column select{
+    outline: none;
+    border: none;
+    height: 30px;
+    width:100%;
+}
+.footer{
+    width: 100%;
+    /* border: 1px solid green; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    margin-top: 10px;
+}
+
+.footer button{
+    width: 100%;
+    margin-top: 20px;
+    font-size: 20px;
+    padding: 17px 0;
+    border-radius: 5px;
+    font-size: 20px;
+    background-color: #4a98f7;
+    border-radius: 5px;
+    color: #fff;
+    cursor: pointer;
+    text-transform: capitalize;
+}
+
+.footer .footer_inner{
+    width: 90%;
+}
+
+
+.alerm{
+    animation: alarmsound .1s ease-in-out infinite;
+}
+
+@keyframes alarmsound {
+    0% {
+        transform: rotate(-15deg);;
+    }
+    100%{
+        transform: rotate(15deg);
+    }
+    
+}
+.font{
+    font-size: 20px;
+}
+
+@media screen and (max-width:480px) {
+
+    .clock_container{
+        height: auto;
+        width: auto;
+    }
+}
+
+@media screen and (min-width:400){
+    #date{
+        font-size: 5px;
+        color: red;
+    }
+}
